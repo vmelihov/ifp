@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Log in</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/registration.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        //= parts/_header.html
+
+        <div class="g-singlepage__content">
+            <div class="p-reg p-login g-content">
+                <div class="p-reg__title">Log in to get start</div>
+
+                <form class="p-reg__form js-form" data-validate="2">
+                    <div class="form-group">
+                        <div class="p-reg__form-linkedin">
+                            <a href="" class="p-reg__form-linkedin-link">
+                                <span class="fab fa-linkedin-in"></span>
+                                Continue with LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="p-reg__form-or">or</div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="p-reg__form-iblock js-validateblock">
+                            <div class="p-reg__form-iblock-icon fal fa-check js-validateblockOk"></div>
+
+                            <input type="email" class="p-reg__form-input js-mailValidation"
+                                placeholder="Work email address" />
+                            <div class="p-reg__form-iblock-error js-validateblockError">Please enter a valid email
+                                address</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="p-reg__form-iblock js-validateblock js-passParent">
+                            <div class="js-passLine">
+                                <div class="p-reg__form-iblock-icon js-passEye fa fa-eye"></div>
+                                <input placeholder="Password" type="password"
+                                    class="p-reg__form-input js-passInput js-passValidation" />
+                            </div>
+                            <div class="js-passLine d-none">
+                                <div class="p-reg__form-iblock">
+                                    <div class="p-reg__form-iblock-icon js-passEye fa fa-eye-slash"></div>
+                                    <input placeholder="Password" type="text"
+                                        class="p-reg__form-input js-notPassInput" />
+                                </div>
+                            </div>
+
+                            <div class="p-reg__form-iblock-error js-validateblockError">
+                                Please enter any words
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <a href="forgot.html">Forgot password?</a>
+                    </div>
+
+                    <div class="p-reg__form-submit">
+                        <input class="p-reg__form-submit-input js-submit" type="submit" value="Sign up" disabled />
+                    </div>
+
+                    <div class="p-reg__form-login">
+                        Don't have an account yet? <a href="registration.html">Create account</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="p-reg__mail d-none js-regDone">
+                <div class="p-reg__mail-title">
+                    We have sent an email with a confirmation link to your email address
+                </div>
+                <div class="p-reg__mail-text">
+                    Thank you for choosing our service
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            //= parts/_footer.html
+        </div>
+    </div>
+    
+    //= parts/_global-scripts.html
+    <script src="js/reg.js"></script>
+</body>
+
+</html>

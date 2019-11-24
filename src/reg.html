@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        //= parts/_header.html
+
+        <div class="g-singlepage__content">
+            <div class="p-auth">
+                <div class="p-auth__block">
+                    <div class="p-auth__block-title">Регистрация</div>
+
+                    <form class="p-auth__block-form js-form" data-validate="5">
+                        <div class="p-auth__block-form-trigger js-trigger">
+                            <input type="hidden" value="1" />
+                            <div class="p-auth__block-form-trigger-decor">
+                                <div class="p-auth__block-form-trigger-decor-trener">
+                                    Я тренер
+                                </div>
+                                <div class="p-auth__block-form-trigger-decor-client">
+                                    Я Клиент
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__block-form-title">Через социальную сеть</div>
+                        <div class="p-auth__block-form-social">
+                            <div class="p-auth__block-form-social-one">
+                                <a href="" class="p-auth__block-form-social-one-link m-gp"></a>
+                            </div>
+                            <div class="p-auth__block-form-social-one">
+                                <a href="" class="p-auth__block-form-social-one-link m-vk"></a>
+                            </div>
+                            <div class="p-auth__block-form-social-one">
+                                <a href="" class="p-auth__block-form-social-one-link m-ya"></a>
+                            </div>
+                            <div class="p-auth__block-form-social-one">
+                                <a href="" class="p-auth__block-form-social-one-link m-fb"></a>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__block-form-or">
+                            <div class="p-auth__block-form-or-text">или</div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-auth__block-form-iblock js-validateblock">
+                                        <div class="p-auth__block-form-iblock-label">Ваше имя </div>
+                                        <div class="p-auth__block-form-iblock-icon fal fa-check js-validateblockOk">
+                                        </div>
+
+                                        <input type="text" class="p-auth__block-form-iblock-input js-textValidation" />
+                                        <div class="p-auth__block-form-iblock-error js-validateblockError">
+                                            Введите имя
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-auth__block-form-iblock js-validateblock">
+                                        <div class="p-auth__block-form-iblock-label">Ваша фамилия</div>
+                                        <div class="p-auth__block-form-iblock-icon fal fa-check js-validateblockOk">
+                                        </div>
+
+                                        <input type="text" class="p-auth__block-form-iblock-input js-textValidation" />
+                                        <div class="p-auth__block-form-iblock-error js-validateblockError">
+                                            Введите фамилию
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="p-auth__block-form-iblock js-validateblock">
+                                <div class="p-auth__block-form-iblock-icon fal fa-check js-validateblockOk"></div>
+
+                                <input type="email" class="p-auth__block-form-input js-mailValidation"
+                                    placeholder="Email" />
+                                <div class="p-auth__block-form-iblock-error js-validateblockError">Введите адрес
+                                    электронной почты</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-auth__block-form-iblock js-validateblock js-passParent">
+                                        <div class="js-passLine">
+                                            <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye"></div>
+                                            <input placeholder="Пароль" type="password"
+                                                class="p-auth__block-form-input js-passInput js-passValidation js-passValidation1" />
+                                        </div>
+                                        <div class="js-passLine d-none">
+                                            <div class="p-auth__block-form-iblock">
+                                                <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye-slash">
+                                                </div>
+                                                <input placeholder="Пароль" type="text"
+                                                    class="p-auth__block-form-input js-notPassInput" />
+                                            </div>
+                                        </div>
+
+                                        <div class="p-auth__block-form-iblock-error js-validateblockError">
+                                            Пароль не подходит
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-auth__block-form-iblock js-validateblock js-passParent">
+                                        <div class="js-passLine">
+                                            <div class="p-auth__block-form-iblock">
+                                                <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye"></div>
+                                                <input placeholder="Подтвердить пароль" type="password"
+                                                    class="p-auth__block-form-input js-passInput js-passValidation js-passValidation2" />
+                                            </div>
+                                        </div>
+                                        <div class="js-passLine d-none">
+                                            <div class="p-auth__block-form-iblock">
+                                                <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye-slash">
+                                                </div>
+                                                <input placeholder="Подтвердить пароль" type="text"
+                                                    class="p-auth__block-form-input js-notPassInput" />
+                                            </div>
+                                        </div>
+
+                                        <div class="p-auth__block-form-iblock-error js-validateblockError">
+                                            Подтвердите пароль
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="p-auth__block-form-info">
+                                <div class="p-auth__block-form-info-title">
+                                    Создайте пароль, который:
+                                </div>
+                                <div class="p-auth__block-form-info-text">
+                                    Cодержит не менее 8 симв.<br />
+                                    Cодержит как строчные (a–z), так и прописные буквы (A–Z)<br />
+                                    Cодержит по крайней мере одну цифру (0–9) или символ.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__block-form-submit">
+                            <input class="p-auth__block-form-submit-input js-submit" type="submit" value="Отправить"
+                                disabled />
+                        </div>
+
+                        <div class="p-auth__block-form-read">
+                            <div class="p-auth__block-form-read-check">
+                                <label class="ui-checkbox">
+                                    <input type="checkbox" name="" />
+                                    <span class="ui-checkbox__decor"></span>
+                                </label>
+                            </div>
+                            <div class="p-auth__block-form-read-text">
+                                Регистрируясь, вы подтверждаете, что принимаете <a href="">Условия пользования</a> и <a
+                                    href="">Политику конфиденциальности</a>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="p-auth__block-login">
+                        У вас уже есть аккаунт? <a href="registration.html">Войти</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-reg__mail d-none js-regDone">
+                <div class="p-reg__mail-title">
+                    We have sent an email with a confirmation link to your email address
+                </div>
+                <div class="p-reg__mail-text">
+                    Thank you for choosing our service
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            //= parts/_footer.html
+        </div>
+    </div>
+
+    //= parts/_global-scripts.html
+    <script>
+        $(".js-trigger").on("click", function () {
+            if (!$(this).hasClass("client")) {
+                $(this).addClass("client");
+                $(this).find("input").val(2);
+            } else {
+                $(this).removeClass("client");
+                $(this).find("input").val(1);
+            }
+        });
+    </script>
+</body>
+
+</html>
