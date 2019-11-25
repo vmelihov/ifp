@@ -313,6 +313,10 @@
                         }
                     }
                 }
+
+                &.m-forgot {
+                    max-width: 220px;
+                }
             }
 
             &-read {
@@ -341,6 +345,55 @@
             margin: 0px -95px;
         }
     }
+
+    &__success {
+        max-width: 460px;
+        background: #3E67B7;
+        margin: auto;
+        padding: 40px;
+        color: #fff;
+        line-height: 25px;
+        pointer-events: auto;
+
+        &-close {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            cursor: pointer;
+            opacity: .5;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+            }
+
+            &:before {
+                width: 100%;
+                border-top: 1px solid #fff;
+                left: 0px;
+                top: 50%;
+            }
+
+            &:after {
+                height: 100%;
+                border-right: 1px solid #fff;
+                left: 50%;
+                top: 0px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.checked .p-auth__block-form-iblock-icon.fa-check {
+    display: block;
 }
 
 @media (max-width: $screen-sm) {

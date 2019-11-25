@@ -229,17 +229,21 @@
                     </form>
 
                     <div class="p-auth__block-login">
-                        У вас уже есть аккаунт? <a href="registration.html">Войти</a>
+                        У вас уже есть аккаунт? <a href="login.html">Войти</a>
                     </div>
                 </div>
             </div>
 
-            <div class="p-reg__mail d-none js-regDone">
-                <div class="p-reg__mail-title">
-                    We have sent an email with a confirmation link to your email address
-                </div>
-                <div class="p-reg__mail-text">
-                    Thank you for choosing our service
+            <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="p-auth__success">
+                        <div class="p-auth__success-close" data-dismiss="modal" aria-label="Close"></div>
+                        <div class="g-info-modal__text">
+                            Благодарим за использование сервиса «IFP».
+                            На указанный Вами email отправлено письмо с подтверждением регистрации
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,14 +286,23 @@
     <script src="js/global.js"></script>
     -->
     <script>
-        $(".js-trigger").on("click", function () {
-            if (!$(this).hasClass("client")) {
-                $(this).addClass("client");
-                $(this).find("input").val(2);
-            } else {
-                $(this).removeClass("client");
-                $(this).find("input").val(1);
-            }
+        jQuery(function ($) {
+            $(".js-trigger").on("click", function () {
+                var _this = $(this);
+                if (!_this.hasClass("client")) {
+                    _this.addClass("client");
+                    _this.find("input").val(2);
+                } else {
+                    _this.removeClass("client");
+                    _this.find("input").val(1);
+                }
+            });
+            //Здесь показываем, что будет после успешной отправки данных
+            $(".js-form").submit(function (event) {
+                $('#mailModal').modal();
+                event.preventDefault();
+            });
+            //Здесь показываем, что будет после успешной отправки данных
         });
     </script>
 </body>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Изменение пароля</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="extension/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        //= parts/_header.html
+
+        <div class="g-singlepage__content">
+            <div class="p-auth">
+                <div class="p-auth__block">
+                    <div class="p-auth__block-title">Изменение пароля</div>
+
+                    <form class="p-auth__block-form js-form" data-validate="2">
+                        <div class="form-group">
+                            <div class="p-auth__block-form-iblock js-validateblock js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye"></div>
+                                    <input placeholder="Новый пароль" type="password"
+                                        class="p-auth__block-form-input js-passInput js-passValidation js-passValidation1" />
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-auth__block-form-iblock">
+                                        <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye-slash">
+                                        </div>
+                                        <input placeholder="Новый пароль" type="text"
+                                            class="p-auth__block-form-input js-notPassInput" />
+                                    </div>
+                                </div>
+
+                                <div class="p-auth__block-form-iblock-error js-validateblockError">
+                                    Пароль не подходит
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="p-auth__block-form-iblock js-validateblock js-passParent">
+                                <div class="js-passLine">
+                                    <div class="p-auth__block-form-iblock">
+                                        <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye"></div>
+                                        <input placeholder="Подтвердить новый пароль" type="password"
+                                            class="p-auth__block-form-input js-passInput js-passValidation js-passValidation2" />
+                                    </div>
+                                </div>
+                                <div class="js-passLine d-none">
+                                    <div class="p-auth__block-form-iblock">
+                                        <div class="p-auth__block-form-iblock-icon js-passEye fa fa-eye-slash">
+                                        </div>
+                                        <input placeholder="Подтвердить новый пароль" type="text"
+                                            class="p-auth__block-form-input js-notPassInput" />
+                                    </div>
+                                </div>
+
+                                <div class="p-auth__block-form-iblock-error js-validateblockError">
+                                    Подтвердите пароль
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__block-form-submit">
+                            <input class="p-auth__block-form-submit-input js-submit" type="submit"
+                                value="Изменить пароль" disabled />
+                        </div>
+                    </form>
+
+                    <div class="p-auth__block-login">
+                        <a href="login.html">Я вспомнил пароль</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="p-auth__success">
+                        <div class="p-auth__success-close" data-dismiss="modal" aria-label="Close"></div>
+                        <div class="g-info-modal__text">
+                            Ваш пароль успешно изменён!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="g-singlepage__footer">
+            //= parts/_footer.html
+        </div>
+    </div>
+
+    //= parts/_global-scripts.html
+    <script>
+        jQuery(function ($) {
+            //Здесь показываем, что будет после успешной отправки данных
+            $(".js-form").submit(function (event) {
+                $('#mailModal').modal();
+                event.preventDefault();
+            });
+            //Здесь показываем, что будет после успешной отправки данных
+        });
+    </script>
+</body>
+
+</html>
