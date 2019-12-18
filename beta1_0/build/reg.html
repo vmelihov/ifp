@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body>
+    <div class="g-singlepage">
+        <header class="g-header" id="header">
+            <div class="container">
+                <div class="g-header__content">
+                    <a href="/" class="g-header__content-logo"></a>
+                    <div class="g-header__content-beta">Beta 1.0</div>
+        
+                    <div class="g-header__content-user js-userMenu">
+                        <a class="g-header__content-user-link js-userMenuLink">
+                            <img src="https://avatarko.ru/img/avatar/19/muzhchina_maska_soldat_18409.jpg"
+                                class="g-header__content-user-link-ava" alt="" />
+                        </a>
+        
+                        <div class="g-header__content-user-popup">
+                            <div class="g-header__content-user-popup-name">
+                                Ника
+                            </div>
+                            <a href="" class="g-header__content-user-popup-link">Сменить пароль</a>
+                            <a href="" class="g-header__content-user-popup-link">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="g-singlepage__content">
+            <div class="p-auth">
+                <div class="p-auth__title">Регистрация</div>
+
+                <div class="p-auth__trigger js-trigger">
+                    <div class="p-auth__trigger-decor">
+                        <div class="p-auth__trigger-decor-trener">
+                            Я тренер
+                        </div>
+                        <div class="p-auth__trigger-decor-client">
+                            Я Клиент
+                        </div>
+                    </div>
+                </div>
+
+                <div id="trainer">
+                    <form class="p-auth__form js-form" data-validate="11">
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-title">
+                                Личные данные
+                            </div>
+                        </div>
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-iblock js-validateblock">
+                                <div class="p-auth__form-line-iblock-label">
+                                    ФИО
+                                </div>
+                                <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                    Введите имя
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Страна
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите страну
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Город
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите город
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Возраст
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation"
+                                            maxlength="3" />
+                                        <div class="p-auth__form-line-iblock-info">
+                                            лет
+                                        </div>
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите возраст
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Тренерский стаж
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation"
+                                            maxlength="3" />
+                                        <div class="p-auth__form-line-iblock-info">
+                                            лет
+                                        </div>
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите стаж
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line js-validateblock">
+                            <input type="email" class="p-auth__form-line-input js-mailValidation" placeholder="Email" />
+                            <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                Введите е-мейл
+                            </div>
+
+                            <div class="p-auth__form-line-info">
+                                На этот Email вам будут поступать заявки от клиентов
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line js-validateblock">
+                            <input type="text" class="p-auth__form-line-input js-textValidation"
+                                placeholder="Ссылка на ваш профиль в instagram" />
+                            <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                Введите ссылку
+                            </div>
+
+                            <div class="p-auth__form-line-info">
+                                Необходимо для того, чтобы мы могли убедиться, что вы тот человек, за которого себя
+                                выдаете
+                            </div>
+                        </div>
+
+                        <textarea class="p-auth__form-textarea"></textarea>
+
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-title">
+                                Участвовали ли вы в соревнованиях?
+                            </div>
+                        </div>
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-competitions">
+                                <div class="p-auth__form-line-competitions-var">
+                                    <label class="p-auth__form-line-competitions-var-radio">
+                                        <input type="radio" name="competitions"
+                                            class="p-auth__form-line-competitions-var-radio-input js-shHide"
+                                            data-show="competitionsBlock" checked />
+                                        <div class="p-auth__form-line-competitions-var-radio-decor"></div>
+                                        <div class="p-auth__form-line-competitions-var-radio-text">
+                                            - Да
+                                        </div>
+                                    </label>
+                                    <label class="p-auth__form-line-competitions-var-radio">
+                                        <input type="radio" name="competitions"
+                                            class="p-auth__form-line-competitions-var-radio-input js-shHide"
+                                            data-hide="competitionsBlock" />
+                                        <div class="p-auth__form-line-competitions-var-radio-decor"></div>
+                                        <div class="p-auth__form-line-competitions-var-radio-text">
+                                            - Нет
+                                        </div>
+                                    </label>
+                                    <label class="p-auth__form-line-competitions-var-radio">
+                                        <input type="radio" name="competitions"
+                                            class="p-auth__form-line-competitions-var-radio-input js-shHide"
+                                            data-hide="competitionsBlock" />
+                                        <div class="p-auth__form-line-competitions-var-radio-decor"></div>
+                                        <div class="p-auth__form-line-competitions-var-radio-text">
+                                            - Планирую
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="p-auth__form-line-competitions-hidden" id="competitionsBlock"
+                                    style="display: block;">
+                                    <div class="js-cLines">
+                                        <div class="p-auth__form-line-competitions-line last js-cLine">
+                                            <input type="text" class="p-auth__form-line-competitions-line-input"
+                                                placeholder="Название соревнования и место" />
+
+                                            <div class="p-auth__form-line-competitions-line-select js-cSelect">
+                                                <div
+                                                    class="p-auth__form-line-competitions-line-select-chosen js-cSelectChosen">
+                                                </div>
+
+                                                <div
+                                                    class="p-auth__form-line-competitions-line-select-popup js-cSelectPopUp">
+                                                    <div class="p-auth__form-line-competitions-line-select-popup-item"
+                                                        data-medal="bronze"></div>
+                                                    <div class="p-auth__form-line-competitions-line-select-popup-item"
+                                                        data-medal="silver"></div>
+                                                    <div class="p-auth__form-line-competitions-line-select-popup-item"
+                                                        data-medal="gold"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="d-none js-cLineParent">
+                                        <div class="p-auth__form-line-competitions-line last js-cLine">
+                                            <input type="text" class="p-auth__form-line-competitions-line-input"
+                                                placeholder="Название соревнования и место" />
+
+                                            <div class="p-auth__form-line-competitions-line-select js-cSelect">
+                                                <div
+                                                    class="p-auth__form-line-competitions-line-select-chosen js-cSelectChosen">
+                                                </div>
+
+                                                <div
+                                                    class="p-auth__form-line-competitions-line-select-popup js-cSelectPopUp">
+                                                    <div class="p-auth__form-line-competitions-line-select-popup-item"
+                                                        data-medal="bronze"></div>
+                                                    <div class="p-auth__form-line-competitions-line-select-popup-item"
+                                                        data-medal="silver"></div>
+                                                    <div class="p-auth__form-line-competitions-line-select-popup-item"
+                                                        data-medal="gold"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="p-auth__form-line-competitions-line-del js-cLineDel"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-auth__form-line-competitions-info">
+                                        Обратите внимание, если в вашем instagram профиле нет соревновательных
+                                        фотографий,
+                                        данные о том, что вы выступали на соревнованиях, не будут указаны на вашей
+                                        карточке
+                                        IFP
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-title">
+                                Придумайте пароль
+                            </div>
+                        </div>
+                        <div class="p-auth__form-line js-passBlock">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                        <div class="js-passLine">
+                                            <div class="p-auth__form-line-iblock-icon m-eye js-passEye"></div>
+                                            <input placeholder="Пароль" type="password"
+                                                class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation1" />
+                                        </div>
+                                        <div class="js-passLine d-none">
+                                            <div class="p-auth__form-line-iblock">
+                                                <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
+                                                </div>
+                                                <input placeholder="Пароль" type="text"
+                                                    class="p-auth__form-line-iblock-pass js-notPassInput" />
+                                            </div>
+                                        </div>
+
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Пароль не подходит
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                        <div class="js-passLine">
+                                            <div class="p-auth__form-line-iblock">
+                                                <div class="p-auth__form-line-iblock-icon js-passEye  m-eye"></div>
+                                                <input placeholder="Подтвердить пароль" type="password"
+                                                    class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation2" />
+                                            </div>
+                                        </div>
+                                        <div class="js-passLine d-none">
+                                            <div class="p-auth__form-line-iblock">
+                                                <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
+                                                </div>
+                                                <input placeholder="Подтвердить пароль" type="text"
+                                                    class="p-auth__form-line-iblock-pass js-notPassInput" />
+                                            </div>
+                                        </div>
+
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Подтвердите пароль
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-agreements">
+                            <div class="p-auth__form-agreements-one">
+                                <label class="ui-checkbox">
+                                    <input class="js-checkValidation" type="checkbox" name="" />
+                                    <span class="ui-checkbox__decor"></span>
+                                    <span class="ui-checkbox__text">Даю согласие на обработку моих персональных
+                                        данных</span>
+                                </label>
+                            </div>
+                            <label class="ui-checkbox">
+                                <input class="js-checkValidation" type="checkbox" name="" />
+                                <span class="ui-checkbox__decor"></span>
+                                <span class="ui-checkbox__text">Я ознакомился (ознакомилась) с</span>
+                            </label>
+                            <a href="">правилами сервиса IFP</a>
+                        </div>
+
+                        <div class="p-auth__form-submit">
+                            <input class="p-auth__form-submit-input js-submit" type="submit" value="Создать профиль"
+                                disabled />
+                        </div>
+                    </form>
+                </div>
+
+                <div id="client" style="display: none;">
+                    <form class="p-auth__form js-form" data-validate="11">
+                        <div class="p-auth__form-data">
+                            Данные из вашего профиля будут автоматически использоваться при отправлении заявок на
+                            получение консультаций
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-title">Личные данные</div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">Ваше имя </div>
+
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите имя
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">Ваша фамилия</div>
+                                        <div class="p-auth__form-line-iblock-icon fal fa-check js-validateblockOk">
+                                        </div>
+
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите фамилию
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Возраст
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation"
+                                            maxlength="3" />
+                                        <div class="p-auth__form-line-iblock-info">
+                                            лет
+                                        </div>
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите возраст
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-icon fal fa-check js-validateblockOk">
+                                        </div>
+
+                                        <input type="email" class="p-auth__form-line-iblock-pass js-mailValidation"
+                                            placeholder="Email" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">Введите адрес
+                                            электронной почты</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Страна
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите страну
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Город
+                                        </div>
+                                        <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Введите город
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line js-validateblock">
+                            <input type="text" class="p-auth__form-line-input js-textValidation"
+                                placeholder="Как с вами связаться?" />
+                            <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                Введите контакт
+                            </div>
+                            <div class="p-auth__form-line-info">
+                                * Укажите ваши контакты в одном из мессенджеров<br />(телеграмм, whatsapp, viber)
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="ui-select js-select">
+                                <div class="ui-select__chosen js-selectChosen">
+                                    Цель обращения к тренеру
+                                </div>
+
+                                <div class="ui-select__list js-selectList">
+                                    <div class="js-selectListScroll">
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 2
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 3
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 4
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 5
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="ui-select js-select">
+                                <div class="ui-select__chosen js-selectChosen">
+                                    Тренировочный стаж
+                                </div>
+
+                                <div class="ui-select__list js-selectList">
+                                    <div class="js-selectListScroll">
+                                        <div class="ui-select__list-item">
+                                            Тренировочный стаж
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 2
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 3
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 4
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 5
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="ui-select js-select">
+                                <div class="ui-select__chosen js-selectChosen">
+                                    Состояние здоровья
+                                </div>
+
+                                <div class="ui-select__list js-selectList">
+                                    <div class="js-selectListScroll">
+                                        <div class="ui-select__list-item">
+                                            Тренировочный стаж
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 2
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 3
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 4
+                                        </div>
+                                        <div class="ui-select__list-item">
+                                            Цель обращения к тренеру 5
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-title">
+                                Придумайте пароль
+                            </div>
+                        </div>
+                        <div class="p-auth__form-line js-passBlock">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                        <div class="js-passLine">
+                                            <div class="p-auth__form-line-iblock-icon m-eye js-passEye"></div>
+                                            <input placeholder="Пароль" type="password"
+                                                class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation1" />
+                                        </div>
+                                        <div class="js-passLine d-none">
+                                            <div class="p-auth__form-line-iblock">
+                                                <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
+                                                </div>
+                                                <input placeholder="Пароль" type="text"
+                                                    class="p-auth__form-line-iblock-pass js-notPassInput" />
+                                            </div>
+                                        </div>
+
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Пароль не подходит
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                        <div class="js-passLine">
+                                            <div class="p-auth__form-line-iblock">
+                                                <div class="p-auth__form-line-iblock-icon js-passEye  m-eye"></div>
+                                                <input placeholder="Подтвердить пароль" type="password"
+                                                    class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation2" />
+                                            </div>
+                                        </div>
+                                        <div class="js-passLine d-none">
+                                            <div class="p-auth__form-line-iblock">
+                                                <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
+                                                </div>
+                                                <input placeholder="Подтвердить пароль" type="text"
+                                                    class="p-auth__form-line-iblock-pass js-notPassInput" />
+                                            </div>
+                                        </div>
+
+                                        <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                            Подтвердите пароль
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-auth__form-agreements">
+                            <div class="p-auth__form-agreements-one">
+                                <label class="ui-checkbox">
+                                    <input class="js-checkValidation" type="checkbox" name="" />
+                                    <span class="ui-checkbox__decor"></span>
+                                    <span class="ui-checkbox__text">Даю согласие на обработку моих персональных
+                                        данных</span>
+                                </label>
+                            </div>
+                            <label class="ui-checkbox">
+                                <input class="js-checkValidation" type="checkbox" name="" />
+                                <span class="ui-checkbox__decor"></span>
+                                <span class="ui-checkbox__text">Я ознакомился (ознакомилась) с</span>
+                            </label>
+                            <a href="">правилами сервиса IFP</a>
+                        </div>
+
+                        <div class="p-auth__form-submit">
+                            <input class="p-auth__form-submit-input js-submit" type="submit" value="Создать профиль"
+                                disabled />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="p-auth__success">
+                        <div class="p-auth__success-close" data-dismiss="modal" aria-label="Close"></div>
+                        <div class="g-info-modal__text">
+                            Благодарим за использование сервиса «IFP».
+                            На указанный Вами email отправлено письмо с подтверждением регистрации
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(".js-trigger").on("click", function () {
+                var _this = $(this);
+                if (!_this.hasClass("client")) {
+                    _this.addClass("client");
+                    $("#trainer").hide();
+                    $("#client").show();
+                } else {
+                    _this.removeClass("client");
+                    $("#client").hide();
+                    $("#trainer").show();
+                }
+            });
+
+
+            $(".js-shHide").on("change", function () {
+                var _this = $(this);
+
+                if (_this.attr("data-hide")) {
+                    $("#" + _this.data("hide")).hide();
+                } else {
+                    $("#" + _this.data("show")).show();
+                }
+            });
+            $("body").on("click", ".js-cSelect", function () {
+                $(this).toggleClass("opened");
+            });
+            $("body").on("click", ".js-cSelectPopUp div", function () {
+                var _this = $(this);
+
+                _this.parents(".js-cSelect").find(".js-cSelectChosen").attr("data-medal", _this.data(
+                    "medal"));
+            });
+            $("body").on("click", ".js-cLine input", function () {
+                var _this = $(this),
+                    _parent = _this.parents(".js-cLine");
+
+                if (_parent.hasClass("last") && _this.val() == "") {
+                    _parent.removeClass("last");
+                    $(".js-cLines").append($(".js-cLineParent").html());
+                }
+            });
+            $("body").on("click", ".js-cLineDel", function () {
+                $(this).parents(".js-cLine").remove();
+                $(".js-cLines").find(".js-cLine:last-child").addClass("last");
+            });
+
+
+            //Здесь показываем, что будет после успешной отправки данных
+            $(".js-form").submit(function (event) {
+                $('#mailModal').modal();
+                event.preventDefault();
+            });
+            //Здесь показываем, что будет после успешной отправки данных
+        });
+    </script>
+</body>
+
+</html>
