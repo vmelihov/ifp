@@ -22,6 +22,7 @@ jQuery(function ($) {
                 }
             }
 
+            //console.log('_form.data("ok")=' + _form.data("ok") + '  _form.data("validate")=' + _form.data("validate"));
             if (_form.data("ok") == _form.data("validate")) {
                 _form.find(".js-submit").removeAttr("disabled");
             } else {
@@ -80,11 +81,12 @@ jQuery(function ($) {
             _form = _this.parents(".js-form");
 
         if (_this.prop("checked")) {
-            _form.data("ok", _form.data("ok") - 1);
-        } else {
             _form.data("ok", _form.data("ok") + 1);
+        } else {
+            _form.data("ok", _form.data("ok") - 1);
         }
 
+        //console.log('_form.data("ok")=' + _form.data("ok") + '  _form.data("validate")=' + _form.data("validate"));
         if (_form.data("ok") == _form.data("validate")) {
             _form.find(".js-submit").removeAttr("disabled");
         } else {
