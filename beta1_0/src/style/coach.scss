@@ -1,0 +1,54 @@
+@import "parts/_vars.scss";
+
+.p-coach {
+    max-width: 350px;
+    margin: 115px auto 200px;
+    text-align: center;
+
+    &__name {
+        font: 25px $gm;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        max-width: 100%;
+        border-radius: 15px;
+        margin-bottom: 40px;
+    }
+
+    &__btns {
+        &-one {
+            display: block;
+            font: 18px/56px $g;
+            border-radius: 15px;
+            background: #8BBF43;
+            color: #fff;
+            margin-bottom: 24px;
+
+            &:hover {
+                background: lighten(#8BBF43, 5%);
+                color: #fff;
+                text-decoration: none;
+            }
+
+            &:last-of-type {
+                color: #83848B;
+                background: none;
+                box-shadow: 0px 0px 0px 2px #BBBCC5;
+
+                &:hover {
+                    background: none;
+                    color: #83848B;
+                    box-shadow: 0px 0px 0px 2px #BBBCC5, 0px 0px 5px #BBBCC5;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-lg) {
+    .p-coach {
+        max-width: 290px;
+        margin: 40px auto 80px;
+    }
+}

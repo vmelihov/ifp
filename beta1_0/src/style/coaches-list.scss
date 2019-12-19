@@ -1,0 +1,306 @@
+@import "parts/_vars.scss";
+
+.p-cl {
+    margin: 120px auto 150px;
+    max-width: 1110px;
+    text-align: center;
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 90px;
+    }
+
+    &__list {
+        margin-bottom: 120px;
+
+        &-one {
+            position: relative;
+            max-width: 350px;
+            cursor: pointer;
+            margin-bottom: 56px;
+
+            &-status {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background: #8BBF43;
+                border-radius: 0px 8px 8px 8px;
+                font: 15px/40px $g;
+                padding: 0px 16px;
+                color: #fff;
+                z-index: 1;
+
+                &.m-busy {
+                    background: #EB5757;
+                }
+            }
+
+            &-img {
+                height: 410px;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 32px;
+                transition: .3s;
+
+                &-ava {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    right: 0px;
+                    width: 100%;
+                    min-height: 100%;
+                    margin: auto;
+                }
+            }
+
+            &-medal {
+                position: absolute;
+                right: 29px;
+                top: 24px;
+                width: 38px;
+                height: 63px;
+
+                &.m-gold {
+                    background: url("../img/medal-gold.svg") 0px 0px no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+
+            &-name {
+                font-size: 25px;
+                margin-bottom: 15px;
+                transition: .3s;
+            }
+
+            &-exp {
+                color: #83848B;
+                transition: .3s;
+            }
+
+            &:hover &-img {
+                box-shadow: 10px 10px 28px rgba(27, 44, 102, 0.41);
+            }
+
+            &:hover &-name {
+                color: #3E67B7;
+                text-decoration: underline;
+            }
+
+            &:hover &-exp {
+                color: #000;
+            }
+        }
+    }
+
+    &__inst-block {
+        max-width: 540px;
+        margin: auto;
+        background: url("../img/insta_icon.svg") center 0px no-repeat;
+        padding-top: 135px;
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+
+.modal-backdrop {
+    background: rgba(35, 40, 66, 0.89);
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.mdl {
+    &-coach {
+        background: #F0F2F3;
+        padding: 40px 24px 40px;
+        max-width: 556px;
+        position: relative;
+        pointer-events: auto;
+
+        &__close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            cursor: pointer;
+            opacity: .5;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+            }
+
+            &:before {
+                width: 100%;
+                border-top: 1px solid #000;
+                left: 0px;
+                top: 50%;
+            }
+
+            &:after {
+                height: 100%;
+                border-right: 1px solid #000;
+                left: 50%;
+                top: 0px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &__content {
+            position: relative;
+            margin-bottom: 32px;
+
+            &-status {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background: #8BBF43;
+                border-radius: 0px 8px 8px 8px;
+                font: 15px/40px $g;
+                padding: 0px 16px;
+                color: #fff;
+                z-index: 1;
+
+                &.m-busy {
+                    background: #EB5757;
+                }
+            }
+
+            &-img {
+                width: 100%;
+            }
+
+            &-send {
+                position: absolute;
+                left: 50%;
+                bottom: 48px;
+                width: 350px;
+                font: 18px/56px $g;
+                margin-left: -175px;
+                background: #8BBF43;
+                color: #fff;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: lighten(#8BBF43, 5%);
+                }
+            }
+        }
+
+        &__name {
+            color: #3E67B7;
+            font-size: 25px;
+            margin-bottom: 16px;
+        }
+
+        &__exp {
+            color: #83848B;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            margin-bottom: 32px;
+        }
+
+        &__competitions {
+            padding-left: 40px;
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            line-height: 24px;
+
+            &.m-gold {
+                background-image: url("../img/gold.svg");
+            }
+
+            &.m-silver {
+                background-image: url("../img/silver.svg");
+            }
+
+            &.m-bronze {
+                background-image: url("../img/bronze.svg");
+            }
+        }
+    }
+
+    &-success {
+        max-width: 460px;
+        background: #3E67B7;
+        margin: auto;
+        padding: 40px;
+        color: #fff;
+        line-height: 25px;
+        pointer-events: auto;
+        text-align: center;
+
+        &__close {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            cursor: pointer;
+            opacity: .5;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+            }
+
+            &:before {
+                width: 100%;
+                border-top: 1px solid #fff;
+                left: 0px;
+                top: 50%;
+            }
+
+            &:after {
+                height: 100%;
+                border-right: 1px solid #fff;
+                left: 50%;
+                top: 0px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .p-cl {
+        margin: 50px auto;
+
+        &__list-one-img {
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .p-cl {
+        &__title {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        &__list-one {
+            margin: 0px auto 50px;
+
+            &-img {
+                height: 120vw;
+            }
+        }
+    }
+}
