@@ -15,29 +15,7 @@
 
 <body>
     <div class="g-singlepage">
-        <header class="g-header" id="header">
-            <div class="container">
-                <div class="g-header__content">
-                    <a href="/" class="g-header__content-logo"></a>
-                    <div class="g-header__content-beta">Beta 1.0</div>
-        
-                    <div class="g-header__content-user js-userMenu">
-                        <a class="g-header__content-user-link js-userMenuLink">
-                            <img src="https://avatarko.ru/img/avatar/19/muzhchina_maska_soldat_18409.jpg"
-                                class="g-header__content-user-link-ava" alt="" />
-                        </a>
-        
-                        <div class="g-header__content-user-popup">
-                            <div class="g-header__content-user-popup-name">
-                                Ника
-                            </div>
-                            <a href="" class="g-header__content-user-popup-link">Сменить пароль</a>
-                            <a href="" class="g-header__content-user-popup-link">Выйти</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        //= parts/_header.html
 
         <div class="g-singlepage__content">
             <div class="p-auth">
@@ -117,12 +95,7 @@
         </div>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="extension/bootstrap-4.0.0/js/popper.min.js"></script>
-    <script src="extension/bootstrap-4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/jquery.nicescroll.js"></script>
-    <script src="js/global.js"></script>
+    //= parts/_global-scripts.html
     <script>
         jQuery(function ($) {
             //Здесь показываем, что будет после успешной отправки данных
