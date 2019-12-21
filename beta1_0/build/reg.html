@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="p-auth__form-line">
-                            <div class="p-auth__form-line-iblock js-validateblock">
+                            <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                 <div class="p-auth__form-line-iblock-label">
                                     ФИО
                                 </div>
@@ -76,7 +76,7 @@
                         <div class="p-auth__form-line">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Страна
                                         </div>
@@ -87,7 +87,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Город
                                         </div>
@@ -103,7 +103,7 @@
                         <div class="p-auth__form-line">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Возраст
                                         </div>
@@ -118,7 +118,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Тренерский стаж
                                         </div>
@@ -206,8 +206,8 @@
                                                 placeholder="Название соревнования и место" />
 
                                             <div class="p-auth__form-line-competitions-line-select js-cSelect">
-                                                <div
-                                                    class="p-auth__form-line-competitions-line-select-chosen js-cSelectChosen">
+                                                <div class="p-auth__form-line-competitions-line-select-chosen js-cSelectChosen"
+                                                    data-medal="gold">
                                                 </div>
 
                                                 <div
@@ -353,7 +353,7 @@
                         <div class="p-auth__form-line">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">Ваше имя </div>
 
                                         <input type="text" class="p-auth__form-line-iblock-input js-textValidation" />
@@ -363,7 +363,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">Ваша фамилия</div>
                                         <div class="p-auth__form-line-iblock-icon fal fa-check js-validateblockOk">
                                         </div>
@@ -380,7 +380,7 @@
                         <div class="p-auth__form-line">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Возраст
                                         </div>
@@ -411,7 +411,7 @@
                         <div class="p-auth__form-line">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Страна
                                         </div>
@@ -422,7 +422,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
                                         <div class="p-auth__form-line-iblock-label">
                                             Город
                                         </div>
@@ -676,6 +676,24 @@
             $("body").on("click", ".js-cLineDel", function () {
                 $(this).parents(".js-cLine").remove();
                 $(".js-cLines").find(".js-cLine:last-child").addClass("last");
+            });
+
+
+            $(".js-ab").on("click", function () {
+                var _this = $(this);
+
+                _this.find("input").focus();
+                if (!_this.hasClass("active")) {
+                    _this.addClass("active")
+                }
+            });
+            $(document).mouseup(function (e) {
+                var div = $(".js-ab.active");
+                if (!div.is(e.target) &&
+                    div.has(e.target).length === 0 &&
+                    div.find("input").val() == "") {
+                    div.removeClass("active");
+                }
             });
 
 

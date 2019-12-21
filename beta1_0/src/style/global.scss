@@ -274,3 +274,9 @@ body {
         }
     }
 }
+
+@media (max-width: $screen-xs) {
+    .ui-checkbox__text {
+        font-size: 13px;
+    }
+}

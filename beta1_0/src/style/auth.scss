@@ -105,8 +105,8 @@
 
                 &-label {
                     left: 16px;
-                    top: 8px;
-                    font-size: 12px;
+                    top: 15px;
+                    transition: .3s;
                 }
 
                 &-info {
@@ -162,6 +162,11 @@
                 &.error &-error {
                     display: block;
                 }
+
+                &.active &-label {
+                    top: 8px;
+                    font-size: 12px;
+                }
             }
 
             &-iblock-input,
@@ -200,7 +205,7 @@
                             top: 0px;
                             width: 32px;
                             height: 32px;
-                            border: 1px solid #BCC0CA;
+                            box-shadow: 0px 0px 0px 1px #BCC0CA;
                             border-radius: 50%;
                             background: #fff;
                             transition: .3s;
@@ -227,29 +232,24 @@
 
                             &:after {
                                 left: 11px;
-                                top: 15px;
+                                top: 16px;
                                 width: 15px;
                                 height: 1px;
                             }
                         }
 
                         &:hover &-decor {
-                            border-color: #3E67B7;
+                            box-shadow: 0px 0px 0px 1px #3E67B7;
                         }
 
                         &-input:checked+&-decor {
                             box-shadow: inset 0px 0px 0px 50px #3E67B7;
-                            border-color: #3E67B7;
 
                             &:before,
                             &:after {
                                 opacity: 1;
                                 box-shadow: 0px 0px 1px #fff;
                             }
-                        }
-
-                        &:hover &-input:checked+&-decor {
-                            border-color: #3E67B7;
                         }
 
                         &-text {
@@ -391,13 +391,9 @@
         &-line-competitions-line-input {
             border: 1px solid #BCC0CA;
 
-            &:hover {
-                box-shadow: 0px 0px 5px rgba(188, 192, 202, .5);
-            }
-
             &:focus {
-                outline: none;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+                border-color: #3E67B7;
+                box-shadow: 0px 0px 0px 1px #3E67B7;
             }
         }
 
@@ -581,84 +577,6 @@
 
             &-title {
                 margin-bottom: 30px;
-            }
-
-            &-social {
-                margin-bottom: 40px;
-
-                &-one {
-                    display: inline-block;
-                    vertical-align: middle;
-
-                    &-link {
-                        display: inline-block;
-                        width: 52px;
-                        height: 52px;
-                        margin: 0px 20px;
-                        border-radius: 50%;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-size: auto 28px;
-                        background-color: #F0F2F3;
-                        transition: .3s;
-
-                        &:hover {
-                            box-shadow: 0px 3px 5px rgba(139, 142, 170, 0.26);
-                        }
-
-                        &.m-gp {
-                            background-image: url("../img/icon-gp.svg");
-                            background-size: auto 21px;
-                        }
-
-                        &.m-vk {
-                            background-color: #436EAB;
-                            background-image: url("../img/icon-vk.svg");
-                            background-size: auto 18px;
-
-                            &:hover {
-                                box-shadow: 0px 3px 5px rgba(40, 46, 95, 0.29);
-                            }
-                        }
-
-                        &.m-ya {
-                            background-image: url("../img/icon-yan.svg");
-                        }
-
-                        &.m-fb {
-                            background-color: #436EAB;
-                            background-image: url("../img/icon-fb.svg");
-
-                            &:hover {
-                                box-shadow: 0px 3px 5px rgba(40, 46, 95, 0.29);
-                            }
-                        }
-                    }
-                }
-            }
-
-            &-or {
-                position: relative;
-                overflow: hidden;
-                max-width: 190px;
-                margin: 0px auto 40px;
-
-                &:before,
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 10px;
-                    border-top: 1px solid #BCC0CA;
-                    width: 200%;
-                }
-
-                &:before {
-                    left: 60%;
-                }
-
-                &:after {
-                    right: 60%;
-                }
             }
 
             &-iblock {
@@ -872,29 +790,35 @@
     .p-auth {
         margin: 80px 15px;
 
-        &__form-line {
-            &-competitions {
-                &-var-radio {
-                    margin-right: 3vw;
-                }
-
-                &-line {
-                    padding-right: 112px;
-
-                    &-select {
-                        right: 33px;
+        &__form {
+            &-line {
+                &-competitions {
+                    &-var-radio {
+                        margin-right: 3vw;
                     }
 
-                    &-del {
-                        right: 0px;
+                    &-line {
+                        padding-right: 112px;
+
+                        &-select {
+                            right: 33px;
+                        }
+
+                        &-del {
+                            right: 0px;
+                        }
                     }
                 }
+            }
+
+            &-agreements {
+                font-size: 13px;
             }
         }
 
         &__block {
             padding: 20px 15px 0px;
-    
+
             &-login {
                 margin: 0px -15px;
             }

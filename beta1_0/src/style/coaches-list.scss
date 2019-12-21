@@ -36,7 +36,7 @@
             }
 
             &-img {
-                height: 410px;
+                padding-top: 120%;
                 position: relative;
                 overflow: hidden;
                 margin-bottom: 32px;
@@ -207,6 +207,7 @@
         }
 
         &__text {
+            line-height: 1.5;
             margin-bottom: 32px;
         }
 
@@ -278,13 +279,22 @@
     }
 }
 
+@media (max-width: $screen-lg) {
+    .p-cl {
+        &__list {
+            margin-bottom: 80px;
+        }
+
+        &__inst-block {
+            padding-top: 104px;
+            background-size: 64px 64px;
+        }
+    }
+}
+
 @media (max-width: $screen-sm) {
     .p-cl {
         margin: 50px auto;
-
-        &__list-one-img {
-            height: 300px;
-        }
     }
 }
 
@@ -295,12 +305,23 @@
             margin-bottom: 50px;
         }
 
-        &__list-one {
-            margin: 0px auto 50px;
+        &__list {
+            margin-bottom: 15px;
 
-            &-img {
-                height: 120vw;
+            &-one {
+                margin: 0px auto 50px;
             }
         }
+
+        &__inst-block {
+            padding-top: 64px;
+            background-size: 40px 40px;
+        }
+    }
+
+    .mdl-coach__content-send {
+        width: 80vw;
+        margin-left: -40vw;
+        bottom: 4vw;
     }
 }
