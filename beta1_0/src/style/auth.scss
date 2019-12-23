@@ -107,6 +107,7 @@
                     left: 16px;
                     top: 15px;
                     transition: .3s;
+                    z-index: 1;
                 }
 
                 &-info {
@@ -123,7 +124,7 @@
                 &-pass {
                     width: 100%;
                     display: block;
-                    padding: 0px 50px 0px 15px;
+                    padding: 20px 50px 2px 15px;
                     color: #000;
                     height: 48px;
                     transition: .3s;
@@ -273,19 +274,42 @@
                     padding-right: 79px;
                     margin-bottom: 32px;
 
+                    &-label {
+                        position: absolute;
+                        color: #83848B;
+                        left: 16px;
+                        top: 15px;
+                        transition: .3s;
+                        z-index: 2;
+                    }
+
+                    &.active &-label {
+                        top: 8px;
+                        font-size: 12px;
+                    }
+
                     &-input {
                         height: 48px;
                         width: 100%;
-                        padding: 0px 16px;
+                        padding: 20px 16px 2px;
+                        border: 0px;
+                        box-shadow: 0px 0px 0px 1px #BCC0CA;
+                    }
+
+                    &.active &-input {
+                        box-shadow: 0px 0px 0px 2px #3E67B7;
+                        position: relative;
+                        z-index: 1;
                     }
 
                     &-select {
                         position: absolute;
                         right: 0px;
-                        top: 1px;
-                        width: 80px;
-                        box-shadow: 0px 0px 0px 1px #BCC0CA;
-                        height: 46px;
+                        top: -1px;
+                        width: 78px;
+                        border: 1px solid #BCC0CA;
+                        border-left: 0px;
+                        height: 50px;
                         background: #fff;
                         cursor: pointer;
 
@@ -387,8 +411,7 @@
         &-textarea,
         &-line-iblock-input,
         &-line-input,
-        &-line-iblock-pass,
-        &-line-competitions-line-input {
+        &-line-iblock-pass {
             border: 1px solid #BCC0CA;
 
             &:focus {

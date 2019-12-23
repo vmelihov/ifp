@@ -113,10 +113,14 @@
                             </div>
                         </div>
 
-                        <div class="p-auth__form-line js-validateblock">
-                            <input type="email" class="p-auth__form-line-input js-mailValidation" placeholder="Email" />
-                            <div class="p-auth__form-line-iblock-error js-validateblockError">
-                                Введите е-мейл
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-iblock js-ab js-validateblock">
+                                <div class="p-auth__form-line-iblock-label">
+                                    Email
+                                </div>
+                                <input type="email" class="p-auth__form-line-iblock-input js-mailValidation" />
+                                <div class="p-auth__form-line-iblock-error js-validateblockError">Введите адрес
+                                    электронной почты</div>
                             </div>
 
                             <div class="p-auth__form-line-info">
@@ -124,11 +128,15 @@
                             </div>
                         </div>
 
-                        <div class="p-auth__form-line js-validateblock">
-                            <input type="text" class="p-auth__form-line-input js-textValidation"
-                                placeholder="Ссылка на ваш профиль в instagram" />
-                            <div class="p-auth__form-line-iblock-error js-validateblockError">
-                                Введите ссылку
+                        <div class="p-auth__form-line">
+                            <div class="p-auth__form-line-iblock js-ab js-validateblock">
+                                <div class="p-auth__form-line-iblock-label">
+                                    Ссылка на ваш профиль в instagram
+                                </div>
+                                <input type="text" class="p-auth__form-line-input js-textValidation" />
+                                <div class="p-auth__form-line-iblock-error js-validateblockError">
+                                    Введите ссылку
+                                </div>
                             </div>
 
                             <div class="p-auth__form-line-info">
@@ -180,8 +188,10 @@
                                     style="display: block;">
                                     <div class="js-cLines">
                                         <div class="p-auth__form-line-competitions-line last js-cLine">
-                                            <input type="text" class="p-auth__form-line-competitions-line-input"
-                                                placeholder="Название соревнования и место" />
+                                            <div class="p-auth__form-line-competitions-line-label js-cLineLabel">
+                                                Название соревнования и место
+                                            </div>
+                                            <input type="text" class="p-auth__form-line-competitions-line-input" />
 
                                             <div class="p-auth__form-line-competitions-line-select js-cSelect">
                                                 <div class="p-auth__form-line-competitions-line-select-chosen js-cSelectChosen"
@@ -205,8 +215,10 @@
 
                                     <div class="d-none js-cLineParent">
                                         <div class="p-auth__form-line-competitions-line last js-cLine">
-                                            <input type="text" class="p-auth__form-line-competitions-line-input"
-                                                placeholder="Название соревнования и место" />
+                                            <div class="p-auth__form-line-competitions-line-label js-cLineLabel">
+                                                Название соревнования и место
+                                            </div>
+                                            <input type="text" class="p-auth__form-line-competitions-line-input" />
 
                                             <div class="p-auth__form-line-competitions-line-select js-cSelect">
                                                 <div
@@ -247,17 +259,20 @@
                         <div class="p-auth__form-line js-passBlock">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock js-passParent">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Пароль
+                                        </div>
                                         <div class="js-passLine">
                                             <div class="p-auth__form-line-iblock-icon m-eye js-passEye"></div>
-                                            <input placeholder="Пароль" type="password"
+                                            <input type="password"
                                                 class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation1" />
                                         </div>
                                         <div class="js-passLine d-none">
                                             <div class="p-auth__form-line-iblock">
                                                 <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
                                                 </div>
-                                                <input placeholder="Пароль" type="text"
+                                                <input type="text"
                                                     class="p-auth__form-line-iblock-pass js-notPassInput" />
                                             </div>
                                         </div>
@@ -268,11 +283,14 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock js-passParent">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Подтвердить пароль
+                                        </div>
                                         <div class="js-passLine">
                                             <div class="p-auth__form-line-iblock">
                                                 <div class="p-auth__form-line-iblock-icon js-passEye  m-eye"></div>
-                                                <input placeholder="Подтвердить пароль" type="password"
+                                                <input type="password"
                                                     class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation2" />
                                             </div>
                                         </div>
@@ -280,7 +298,7 @@
                                             <div class="p-auth__form-line-iblock">
                                                 <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
                                                 </div>
-                                                <input placeholder="Подтвердить пароль" type="text"
+                                                <input type="text"
                                                     class="p-auth__form-line-iblock-pass js-notPassInput" />
                                             </div>
                                         </div>
@@ -373,12 +391,11 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock">
-                                        <div class="p-auth__form-line-iblock-icon fal fa-check js-validateblockOk">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Email
                                         </div>
-
-                                        <input type="email" class="p-auth__form-line-iblock-pass js-mailValidation"
-                                            placeholder="Email" />
+                                        <input type="email" class="p-auth__form-line-iblock-input js-mailValidation" />
                                         <div class="p-auth__form-line-iblock-error js-validateblockError">Введите адрес
                                             электронной почты</div>
                                     </div>
@@ -516,17 +533,20 @@
                         <div class="p-auth__form-line js-passBlock">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock js-passParent">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Пароль
+                                        </div>
                                         <div class="js-passLine">
                                             <div class="p-auth__form-line-iblock-icon m-eye js-passEye"></div>
-                                            <input placeholder="Пароль" type="password"
+                                            <input type="password"
                                                 class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation1" />
                                         </div>
                                         <div class="js-passLine d-none">
                                             <div class="p-auth__form-line-iblock">
                                                 <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
                                                 </div>
-                                                <input placeholder="Пароль" type="text"
+                                                <input type="text"
                                                     class="p-auth__form-line-iblock-pass js-notPassInput" />
                                             </div>
                                         </div>
@@ -537,11 +557,14 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="p-auth__form-line-iblock js-validateblock js-passParent">
+                                    <div class="p-auth__form-line-iblock js-ab js-validateblock js-passParent">
+                                        <div class="p-auth__form-line-iblock-label">
+                                            Подтвердить пароль
+                                        </div>
                                         <div class="js-passLine">
                                             <div class="p-auth__form-line-iblock">
                                                 <div class="p-auth__form-line-iblock-icon js-passEye  m-eye"></div>
-                                                <input placeholder="Подтвердить пароль" type="password"
+                                                <input type="password"
                                                     class="p-auth__form-line-iblock-pass js-passInput js-passValidation js-passValidation2" />
                                             </div>
                                         </div>
@@ -549,7 +572,7 @@
                                             <div class="p-auth__form-line-iblock">
                                                 <div class="p-auth__form-line-iblock-icon js-passEye m-eye-slash">
                                                 </div>
-                                                <input placeholder="Подтвердить пароль" type="text"
+                                                <input type="text"
                                                     class="p-auth__form-line-iblock-pass js-notPassInput" />
                                             </div>
                                         </div>
@@ -631,6 +654,13 @@
             $("body").on("click", ".js-cSelect", function () {
                 $(this).toggleClass("opened");
             });
+            $(document).mouseup(function (e) {
+                var div = $(".js-cSelect");
+                if (!div.is(e.target) &&
+                    div.has(e.target).length === 0) {
+                    div.removeClass("opened");
+                }
+            });
             $("body").on("click", ".js-cSelectPopUp div", function () {
                 var _this = $(this);
 
@@ -641,9 +671,36 @@
                 var _this = $(this),
                     _parent = _this.parents(".js-cLine");
 
+                if (_this.val() == "" && !_parent.hasClass("active")) {
+                    _parent.addClass("active");
+                }
+
                 if (_parent.hasClass("last") && _this.val() == "") {
                     _parent.removeClass("last");
                     $(".js-cLines").append($(".js-cLineParent").html());
+                }
+            });
+            $("body").on("click", ".js-cLineLabel", function () {
+                var _this = $(this),
+                    _parent = _this.parents(".js-cLine"),
+                    _input = _parent.find("input");
+
+                _input.focus();
+                if (!_parent.hasClass("active")) {
+                    _parent.addClass("active")
+                }
+
+                if (_parent.hasClass("last") && _input.val() == "") {
+                    _parent.removeClass("last");
+                    $(".js-cLines").append($(".js-cLineParent").html());
+                }
+            });
+            $(document).mouseup(function (e) {
+                var div = $(".js-cLine.active");
+                if (!div.is(e.target) &&
+                    div.has(e.target).length === 0 &&
+                    div.find("input").val() == "") {
+                    div.removeClass("active");
                 }
             });
             $("body").on("click", ".js-cLineDel", function () {
@@ -652,7 +709,7 @@
             });
 
 
-            $(".js-ab").on("click", function () {
+            $("body").on("click", ".js-ab", function () {
                 var _this = $(this);
 
                 _this.find("input").focus();
