@@ -909,12 +909,15 @@
                     margin-bottom: 24px;
                 }
 
-                &-input+&-iblock-error {
-                    margin-top: -24px;
-                }
-
                 &-iblock &-input {
                     margin: 0px;
+                }
+
+                &-iblock-label {
+                    max-width: calc(100vw - 62px);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
 
                 &-competitions {
