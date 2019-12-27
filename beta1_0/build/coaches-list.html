@@ -246,7 +246,7 @@
                     </div>
 
                     <div class="mdl-coach__content-auth">
-                        <a href="login.html">Авторизуйтесь</a>, чтобы отправлять заявки
+                        <a href="login.html">Авторизуйтесь</a>, чтобы <span>отправлять заявки</span>
                     </div>
                 </div>
 
@@ -297,6 +297,22 @@
     <script src="js/validation.js"></script>
     <script src="js/jquery.nicescroll.js"></script>
     <script src="js/global.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $(".carousel").swipe({
+
+                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+
+                    if (direction == 'left') $(this).carousel('next');
+                    if (direction == 'right') $(this).carousel('prev');
+
+                },
+                allowPageScroll: "vertical"
+
+            });
+        });
+    </script>
 </body>
 
 </html>

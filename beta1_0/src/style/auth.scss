@@ -987,6 +987,12 @@
 
             &-login {
                 margin: 0px -15px;
+                line-height: 1.5;
+            }
+
+            &-form-forgot-link {
+                display: block;
+                margin-bottom: 16px;
             }
         }
     }

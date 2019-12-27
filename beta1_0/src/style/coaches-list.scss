@@ -438,9 +438,15 @@
         }
     }
 
-    .mdl-coach__content-send {
-        font-size: 16px;
-        left: 5%;
-        width: 90%;
+    .mdl-coach__content {
+        &-send {
+            font-size: 16px;
+            left: 5%;
+            width: 90%;
+        }
+
+        &-auth span {
+            display: block;
+        }
     }
 }
