@@ -913,6 +913,10 @@
                     margin-top: -24px;
                 }
 
+                &-iblock &-input {
+                    margin: 0px;
+                }
+
                 &-competitions {
                     &-var-radio {
                         margin-right: 3vw;
@@ -922,7 +926,7 @@
                         padding-right: 112px;
 
                         &-label {
-                            max-width: 230px;
+                            max-width: calc(100vw - 170px);
                             overflow: hidden;
                             text-overflow: ellipsis;
                             white-space: nowrap;
