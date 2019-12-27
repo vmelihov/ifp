@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>Регистрация</title>
     <link rel="stylesheet" href="extension/bootstrap-4.0.0/css/bootstrap.min.css" />
@@ -20,6 +20,9 @@
         <div class="g-singlepage__content">
             <div class="p-auth">
                 <div class="p-auth__title">Регистрация</div>
+                <div class="p-auth__enter">
+                    Уже есть аккаунт IFP? <a href="login.html">Войти</a>
+                </div>
 
                 <div class="p-auth__trigger js-trigger">
                     <div class="p-auth__trigger-decor">
@@ -145,7 +148,59 @@
                             </div>
                         </div>
 
+                        <div class="p-auth__form-textarea-info">
+                            Напишите вкратце о предоставляемых вами услугах и о преимуществах работы с вами
+                        </div>
                         <textarea class="p-auth__form-textarea"></textarea>
+
+                        <div class="p-auth__form-photo">
+                            <div class="p-auth__form-photo-file">
+                                Загрузить фото
+                                <input type="file" class="p-auth__form-photo-file-input" />
+                            </div>
+
+                            <div class="p-auth__form-line-info">
+                                Загрузите от 1 до 5 фотографий для вашего профиля
+                            </div>
+
+                            <div class="p-auth__form-photo-list">
+                                <div class="p-auth__form-photo-list-one">
+                                    <div class="p-auth__form-photo-list-one-wrap">
+                                        <img src="https://cdn-blog.scorum.com/production/maryia/ab6b6d8df04520cb_800"
+                                            class="p-auth__form-photo-list-one-wrap-img" alt="" />
+                                    </div>
+                                    <div class="p-auth__form-photo-list-one-del">Удалить</div>
+                                </div>
+                                <div class="p-auth__form-photo-list-one">
+                                    <div class="p-auth__form-photo-list-one-wrap">
+                                        <img src="https://cs8.pikabu.ru/post_img/big/2016/10/09/4/1475991036155087840.jpg"
+                                            class="p-auth__form-photo-list-one-wrap-img" alt="" />
+                                    </div>
+                                    <div class="p-auth__form-photo-list-one-del">Удалить</div>
+                                </div>
+                                <div class="p-auth__form-photo-list-one">
+                                    <div class="p-auth__form-photo-list-one-wrap">
+                                        <img src="http://kak-bog.ru/sites/default/files/article_images/inessa/12/01/2017_-_2116/all/vorkaut.jpg"
+                                            class="p-auth__form-photo-list-one-wrap-img" alt="" />
+                                    </div>
+                                    <div class="p-auth__form-photo-list-one-del">Удалить</div>
+                                </div>
+                                <div class="p-auth__form-photo-list-one">
+                                    <div class="p-auth__form-photo-list-one-wrap">
+                                        <img src="http://ss.sport-express.ru/userfiles/materials/103/1032051/large.jpg"
+                                            class="p-auth__form-photo-list-one-wrap-img" alt="" />
+                                    </div>
+                                    <div class="p-auth__form-photo-list-one-del">Удалить</div>
+                                </div>
+                                <div class="p-auth__form-photo-list-one">
+                                    <div class="p-auth__form-photo-list-one-wrap">
+                                        <img src="https://now-chita.ru/media/galleries/7e3ed860-cc3d-415e-83a8-89e2c57f923b.JPG.673x528_q85_crop-smart.jpg"
+                                            class="p-auth__form-photo-list-one-wrap-img" alt="" />
+                                    </div>
+                                    <div class="p-auth__form-photo-list-one-del">Удалить</div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="p-auth__form-line">
                             <div class="p-auth__form-line-title">
@@ -320,12 +375,14 @@
                                         данных</span>
                                 </label>
                             </div>
-                            <label class="ui-checkbox">
-                                <input class="js-checkValidation" type="checkbox" name="" />
-                                <span class="ui-checkbox__decor"></span>
-                                <span class="ui-checkbox__text">Я ознакомился (ознакомилась) с</span>
-                            </label>
-                            <a href="">правилами сервиса IFP</a>
+                            <div class="p-auth__form-agreements-one">
+                                <label class="ui-checkbox">
+                                    <input class="js-checkValidation" type="checkbox" name="" />
+                                    <span class="ui-checkbox__decor"></span>
+                                    <span class="ui-checkbox__text">Я ознакомился (ознакомилась) с</span>
+                                </label>
+                                <a href="">правилами <span></span>сервиса IFP</a>
+                            </div>
                         </div>
 
                         <div class="p-auth__form-submit">
@@ -594,12 +651,14 @@
                                         данных</span>
                                 </label>
                             </div>
-                            <label class="ui-checkbox">
-                                <input class="js-checkValidation" type="checkbox" name="" />
-                                <span class="ui-checkbox__decor"></span>
-                                <span class="ui-checkbox__text">Я ознакомился (ознакомилась) с</span>
-                            </label>
-                            <a href="">правилами сервиса IFP</a>
+                            <div class="p-auth__form-agreements-one">
+                                <label class="ui-checkbox">
+                                    <input class="js-checkValidation" type="checkbox" name="" />
+                                    <span class="ui-checkbox__decor"></span>
+                                    <span class="ui-checkbox__text">Я ознакомился (ознакомилась) с</span>
+                                </label>
+                                <a href="">правилами сервиса IFP</a>
+                            </div>
                         </div>
 
                         <div class="p-auth__form-submit">

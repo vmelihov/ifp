@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <div class="p-cl__list-one" data-toggle="modal" data-target="#coachModal">
+                                <div class="p-cl__list-one" data-toggle="modal" data-target="#coachModal2">
                                     <div class="p-cl__list-one-status m-busy">Занят</div>
                                     <div class="p-cl__list-one-img">
                                         <img src="http://ncvsm.ru/front/images/news/2014/1/1391750690515.jpg"
@@ -147,9 +147,34 @@
 
                 <div class="mdl-coach__content">
                     <div class="mdl-coach__content-status">Свободна</div>
-                    <img src="https://www.ambal.ru/72662350132.jpg" class="mdl-coach__content-img" alt="" />
+                    <div id="carousel01" class="carousel slide mdl-coach__content-carousel" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="http://babochkaspb.ru/wp-content/uploads/2016/02/14717efaa626e1a4993c79097c5146dc.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://babochkaspb.ru/wp-content/uploads/2016/02/bc20b65a962edc49f9727dc54c91cc68.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://babochkaspb.ru/wp-content/uploads/2016/02/0b5caad3f5651bbc4fdc492559b92785.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
 
-                    <div class="mdl-coach__content-send" data-toggle="modal" data-target="#sendedModal"
+                        <a class="mdl-coach__content-carousel-link prev" href="#carousel01" role="button"
+                            data-slide="prev"></a>
+                        <a class="mdl-coach__content-carousel-link next" href="#carousel01" role="button"
+                            data-slide="next"></a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel01" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel01" data-slide-to="1"></li>
+                            <li data-target="#carousel01" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+
+                    <div class="mdl-coach__content-send" data-toggle="modal" data-target="#requestModal"
                         data-dismiss="modal" aria-label="Close">Отправить заявку тренеру</div>
                 </div>
 
@@ -161,6 +186,84 @@
                     aliquip ex ea commodo consequat.
                 </div>
                 <div class="mdl-coach__competitions m-gold">Чемпионат Европы WBPF 2019</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="coachModal2" tabindex="-1" role="dialog" aria-labelledby="coachModal2Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="mdl-coach">
+                <div class="mdl-coach__close" data-dismiss="modal" aria-label="Close"></div>
+
+                <div class="mdl-coach__content">
+                    <div class="mdl-coach__content-status">Свободна</div>
+                    <div id="carousel02" class="carousel slide mdl-coach__content-carousel" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="http://babochkaspb.ru/wp-content/uploads/2016/02/14717efaa626e1a4993c79097c5146dc.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://babochkaspb.ru/wp-content/uploads/2016/02/bc20b65a962edc49f9727dc54c91cc68.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://babochkaspb.ru/wp-content/uploads/2016/02/0b5caad3f5651bbc4fdc492559b92785.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn-blog.scorum.com/production/maryia/ab6b6d8df04520cb_800"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cs8.pikabu.ru/post_img/big/2016/10/09/4/1475991036155087840.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+
+                        <a class="mdl-coach__content-carousel-link prev" href="#carousel02" role="button"
+                            data-slide="prev"></a>
+                        <a class="mdl-coach__content-carousel-link next" href="#carousel02" role="button"
+                            data-slide="next"></a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel02" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel02" data-slide-to="1"></li>
+                            <li data-target="#carousel02" data-slide-to="2"></li>
+                            <li data-target="#carousel02" data-slide-to="3"></li>
+                            <li data-target="#carousel02" data-slide-to="4"></li>
+                        </ol>
+                    </div>
+
+                    <div class="mdl-coach__content-auth">
+                        <a href="login.html">Авторизуйтесь</a>, чтобы отправлять заявки
+                    </div>
+                </div>
+
+                <div class="mdl-coach__name">София</div>
+                <div class="mdl-coach__exp">Тренерский стаж: 5 лет</div>
+                <div class="mdl-coach__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </div>
+                <div class="mdl-coach__competitions m-gold">Чемпионат Европы WBPF 2019</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="mdl-request">
+                <div class="mdl-request__close"></div>
+                <div class="mdl-request__title">Ваша заявка</div>
+                <div class="mdl-request__info">Сообщение тренеру</div>
+                <textarea class="mdl-request__textarea"></textarea>
+                <div class="mdl-request__send" data-toggle="modal" data-target="#sendedModal" data-dismiss="modal"
+                    aria-label="Close">
+                    Отправить
+                </div>
             </div>
         </div>
     </div>
