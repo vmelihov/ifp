@@ -23,7 +23,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "owl.carousel": "^2.3.4"
   }
 }
